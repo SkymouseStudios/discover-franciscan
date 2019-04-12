@@ -6,6 +6,20 @@
 
 get_header(); ?>
 
+<!-- Header -->
+<section class="sales-hero">
+	<a class="sales-tag" href="#Special">Free night stay for parents in April 2019!</a>
+
+	<div class="hero-items">
+		<h1>Visit A Campus Like No Other</h1>
+		<p>Academically Excellent. Passionately Catholic.</p>
+	</div>
+	
+	<video class="sales-header-video" playsinline="" loop="" autoplay="" muted="" poster="">
+		<source src="https://exodus90.local/wp-content/uploads/2019/04/FUS-header.mp4" type="video/mp4">
+	</video>
+</section>
+
 <!-- (Repeat Sections) -->
 	<?php 
 

@@ -8,28 +8,9 @@ License: This WordPress theme is comprised of two parts: (1) The PHP code and in
 Template: dt-the7
 */
 
-/* -------- Helper Classes */
-.grid-half {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 0px;
-}
-
-.grid-three {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	grid-gap: 50px;
-}
-
-.grid-two-thirds {
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-	grid-gap: 50px;
-}
-
-.sales-h2 {
-	font-family: Palatino;
-}
+/*********************
+BASE
+*********************/
 
 :root {
   --gold: #998643;
@@ -39,38 +20,75 @@ Template: dt-the7
   --yellow: #ffc658;
 }
 
+.hero-items {
+	position: absolute;
+	color: white;
+	text-align: center;
+	top: 30%;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	padding: 0px 40px;
+}
+
+.hero-items h1 {
+	color: white;
+	font-size: 40px;
+	text-shadow: #5d5d5d 1px 1px 20px;
+}
+
+.hero-items p {
+	font-size: 20px;
+	text-shadow: #5d5d5d 1px 1px 20px;
+}
+
+.sales-hero {
+	position: relative;
+	margin-bottom: 40px;
+	max-height: 500px;
+}
+
+.sales-header-video {
+	height: 500px;
+	max-width: none;
+}
+
+.sales-hero .sales-tag {
+	position: absolute;
+	top: 0px;
+	border-radius: 0px;
+	position: fixed;
+	width: 100%;
+	text-align: center;
+}
+
+.grid-two-thirds {
+	display: grid;
+	grid-gap: 50px;
+}
 
 .page-template-page-sales-template .wf-wrap {
 	width: auto !important;
 	padding: 0px;
-	margin: 0px;
+	margin: 0px !important;
 }
 
 .page-template-page-sales-template .sales-section {
-	width: 1200px;
-	margin: 0 auto;
+	width: auto;
+	margin: 0 20px;
 }
 
 .page-template-page-sales-template #main {
 	padding: 0px;
 }
-/* -------- Section - Default */
 
-.sales-panel {
-	align-items: center;
-	position: relative;
-	overflow: hidden;
-	margin: 40px auto;
-	z-index: 1;
-	width: 1200px;
+.page-template-page-sales-template #main .wf-wrap {
+	padding: 0px;
 }
 
-.video-card {
-	border-radius: var(--radius);
-	z-index: -1;
-	overflow: hidden;
-	width: 100%;
-	height: 400px;
+.sales-panel {
+	margin: 0px auto 40px auto;
+	z-index: 1;
 }
 
 .sales-panel:nth-child(even) {
@@ -78,53 +96,26 @@ Template: dt-the7
 	width: 100%;
 }
 
-.sales-panel:nth-child(even) .video-card {
+.grid-half {
+	display: grid;
+	grid-gap: 0px;
+}
+
+.grid-three {
+	display: grid;
+	grid-gap: 20px;
+}
+
+.video-card {
 	grid-column: 1;
 	grid-row: 1;
-	border-radius: 0px;
-}
-
-.sales-panel:nth-child(even) .text-holder {
-	grid-column: 2;
-	grid-row: 1;
-}
-
-.sales-panel:nth-child(even) .text-card {
-	margin-right: 100px;
-	margin-left: -100px;
-}
-
-.text-card {
-	border-radius: var(--radius);
-	background-color: white;
-	box-shadow: 4px -2px 70px 0 rgba(174,174,174,0.5);
-	padding: 20px 40px;
-	margin-right: -100px;
-	margin-left: 50px;
-	max-width: 550px;
-	z-index: 10;
-}
-
-.text-card p {
-	font-size: 20px;
-	line-height: 35px;
-	color: black;
-	margin: 0px;
-}
-
-.text-card h3 {
-	font-family: Palatino;
-	font-size: 35px;
-	color: black;
-	margin: 0px;
-}
-
-.gold-line {
-	height: 10px;
-	background-color: var(--gold);
-	width: 80px;
-	margin: 20px auto 20px -20px;
-	border: none;
+	z-index: 1;
+	overflow: hidden;
+	width: 100%;
+	width: auto;
+	height: 300px;
+	margin-right: 20px;
+	border-radius: 0px 5px 5px 0px;
 }
 
 .video-card video {
@@ -133,56 +124,56 @@ Template: dt-the7
 	max-width: none;
 }
 
-/* -------- Section - Sales Special */
-
-.sales-special {
-	margin-top: 100px;
+.text-card {
+	background-color: white;
+	box-shadow: 4px -2px 70px 0 rgba(174,174,174,0.5);
+	padding: 20px 40px;
+	margin-left: 20px;
+	margin-top: -20px;
+	border-radius: 5px 0px 0px 5px;
 }
 
-.sales-tag {
-	background-color: var(--red);
-	border-radius: var(--radius);
-	padding: 5px 10px;
-	color: white;
-	font-weight: 800;
-	display: inline-block;
-}
-
-.special-image {
-	width: 100%;
-	border-radius: var(--radius);
-	max-height: 450px;
-	overflow: hidden;
-}
-
-.special-features {
-	margin-top: 40px;
-	background-color: #F0F0F0;
-	padding: 40px 40px;
-}
-
-
-/* -------- Section - Sales CTA */
-.sales-cta {
-	padding-top: 100px;
-	padding-bottom: 100px;
-	text-align: center;
-	background-image: url(http://discover.franciscan.network/wp-content/uploads/2019/04/fus-seal.png);
-	background-position: 144% 20%;
-	background-size: 70%;
-	background-repeat: no-repeat;
-}
-
-.sales-cta a {
-	background-color: var(--yellow);
-	border-radius: var(--radius) ;
-	padding: 10px;
+.text-card p {
+	font-size: 16px;
+	line-height: 30px;
 	color: black;
-	text-decoration: none;
+	margin: 0px;
 }
 
-.sales-cta a:hover {
+.text-card h3 {
+	font-family: Palatino;
+	font-size: 20px;
+	color: black;
+	margin: 0px;
+}
+
+.text-holder {
+	grid-column: 1;
+	grid-row: 2;
+	z-index: 10;
+}
+
+.sales-panel:nth-child(even) .text-card {
+	margin-right: 20px;
+	margin-left: 0px;
+	margin-bottom: -20px;
+	border-radius: 0px 5px 5px 0px;
+}
+
+.sales-panel:nth-child(even) .video-card {
+	margin-top: -20px;
+	margin-left: 20px;
+	margin-right: 0px;
+	border-radius: 5px 0px 0px 5px;
 	
+}
+
+.gold-line {
+	height: 10px;
+	background-color: var(--gold);
+	width: 80px;
+	margin: 20px auto 20px -20px;
+	border: none;
 }
 
 /* -------- Section - Quote Callout */
@@ -206,10 +197,225 @@ Template: dt-the7
 }
 
 .sales-large-quote {
-	font-size: 50px;
-	line-height: 60px;
+	font-size: 30px;
+	line-height: 40px;
 	font-weight: 900;
 	color: white;
 	padding: 100px 0px;
 	max-width: 500px;
 }
+
+/* -------- Section - Sales CTA */
+.sales-cta {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	text-align: center;
+	background-image: url(http://discover.franciscan.network/wp-content/uploads/2019/04/fus-seal.png);
+	background-position: 184% 20%;
+	background-size: 90%;
+	background-repeat: no-repeat;
+}
+
+.sales-cta a {
+	background-color: var(--yellow);
+	border-radius: var(--radius) ;
+	padding: 10px;
+	color: black;
+	text-decoration: none;
+}
+
+.sales-cta a:hover {
+	
+}
+
+.sales-special {
+	margin-top: 50px;
+}
+
+.sales-tag {
+	background-color: var(--red);
+	border-radius: var(--radius);
+	padding: 5px 10px;
+	color: white;
+	font-weight: 800;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.special-image {
+	width: 100%;
+	border-radius: var(--radius);
+	max-height: 350px;
+	overflow: hidden;
+	grid-row: 1;
+}
+
+.special-features {
+	margin-top: 40px;
+	background-color: #F0F0F0;
+	padding: 40px 40px;
+}
+
+
+/*********************
+TABLET
+*********************/ 
+
+@media only screen and (min-width: 768px) {
+
+/* -------- Helper Classes */
+.grid-half {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 0px;
+}
+
+.grid-three {
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 50px;
+}
+
+.grid-two-thirds {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-gap: 50px;
+}
+
+.sales-h2 {
+	font-family: Palatino;
+}
+
+/* -------- Page - Default */
+
+.page-template-page-sales-template .sales-section {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.sales-header-video {
+	height: auto;
+	max-width: 100%;
+}
+
+/* -------- Section - Default */
+
+.sales-panel {
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	margin: 20px auto;
+	z-index: 1;
+	width: auto;
+}
+
+.sales-panel:nth-child(even) {
+	background-color: var(--lblue);
+	width: 100%;
+}
+
+.sales-panel:nth-child(even) .video-card {
+	grid-column: 1;
+	grid-row: 1;
+	border-radius: 0px;
+	margin: 0;
+}
+
+.sales-panel:nth-child(even) .text-holder {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.sales-panel:nth-child(even) .text-card {
+	margin-right: 50px;
+	margin-left: -50px;
+	border-radius: var(--radius);
+}
+
+.text-card {
+	border-radius: var(--radius);
+	margin-right: -50px;
+	margin-left: 50px;
+	max-width: 550px;
+}
+
+.text-holder {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.text-card p {
+	font-size: 20px;
+	line-height: 35px;
+}
+
+.text-card h3 {
+	font-size: 35px;
+}
+
+.video-card {
+	border-radius: var(--radius);
+	z-index: -1;
+	overflow: hidden;
+	width: 100%;
+	height: 400px;
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.video-card video {
+	display: block;
+	height: 100%;
+	max-width: none;
+}
+
+/* -------- Section - Sales Special */
+
+.sales-special {
+	margin-top: 100px;
+}
+
+.special-image {
+	max-height: 450px;
+	grid-column: 2;
+}
+
+.special-features {
+	margin-top: 40px;
+	background-color: #F0F0F0;
+	padding: 40px 40px;
+}
+
+.sales-large-quote {
+	font-size: 50px;
+	line-height: 60px;
+}
+
+.sales-cta {
+	background-position: 144% 20%;
+	background-size: 70%;
+}
+
+} /* End Desktop Styles */
+
+
+@media only screen and (min-width: 1030px) {
+	.page-template-page-sales-template .sales-section {
+		width: 1200px;
+		margin: 0 auto;
+	}
+
+	.sales-panel {
+		width: 1200px;
+		margin: 40px auto;
+	}
+
+	.sales-panel:nth-child(even) .text-card {
+		margin-right: 100px;
+		margin-left: -100px;
+	}
+
+	.text-card {
+		margin-right: -100px;
+		margin-left: 100px;
+	}
+}  
