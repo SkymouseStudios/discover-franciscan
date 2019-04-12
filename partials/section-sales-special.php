@@ -1,8 +1,8 @@
 <?php 
-	$sales_special_text = the_field('sales_special_text');
-	$sales_special_header = the_field('sales_special_header');
-	$sales_special_banner = the_field('sales_special_banner');
-	$sales_special_img = the_field('sales_special_img');
+	$sales_special_text = the_field('sales_special_text', $post_id);
+	$sales_special_header = the_field('sales_special_header', $post_id);
+	$sales_special_banner = the_field('sales_special_banner', $post_id);
+	$sales_special_img = the_field('sales_special_img', $post_id);
  ?>
 
  <section id="Special">

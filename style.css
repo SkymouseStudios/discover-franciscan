@@ -18,7 +18,17 @@ Template: dt-the7
 .grid-three {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	grid-gap: 80px;
+	grid-gap: 50px;
+}
+
+.grid-two-thirds {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-gap: 50px;
+}
+
+.sales-h2 {
+	font-family: Palatino;
 }
 
 :root {
@@ -26,58 +36,180 @@ Template: dt-the7
   --lblue: #8E9FBC;
   --red: #FF4D4D;
   --radius: 5px;
+  --yellow: #ffc658;
 }
 
 
+.page-template-page-sales-template .wf-wrap {
+	width: auto !important;
+	padding: 0px;
+	margin: 0px;
+}
+
+.page-template-page-sales-template .sales-section {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.page-template-page-sales-template #main {
+	padding: 0px;
+}
 /* -------- Section - Default */
-.sales-panel {
 
+.sales-panel {
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	margin: 40px auto;
+	z-index: 1;
+	width: 1200px;
 }
 
-.sales-panel:even {
-	background-color: var(--blue);
+.video-card {
+	border-radius: var(--radius);
+	z-index: -1;
+	overflow: hidden;
+	width: 100%;
+	height: 400px;
+}
+
+.sales-panel:nth-child(even) {
+	background-color: var(--lblue);
+	width: 100%;
+}
+
+.sales-panel:nth-child(even) .video-card {
+	grid-column: 1;
+	grid-row: 1;
+	border-radius: 0px;
+}
+
+.sales-panel:nth-child(even) .text-holder {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.sales-panel:nth-child(even) .text-card {
+	margin-right: 100px;
+	margin-left: -100px;
 }
 
 .text-card {
 	border-radius: var(--radius);
 	background-color: white;
 	box-shadow: 4px -2px 70px 0 rgba(174,174,174,0.5);
-	padding: 20px;
+	padding: 20px 40px;
+	margin-right: -100px;
+	margin-left: 50px;
+	max-width: 550px;
+	z-index: 10;
+}
+
+.text-card p {
+	font-size: 20px;
+	line-height: 35px;
+	color: black;
+	margin: 0px;
+}
+
+.text-card h3 {
+	font-family: Palatino;
+	font-size: 35px;
+	color: black;
+	margin: 0px;
 }
 
 .gold-line {
 	height: 10px;
 	background-color: var(--gold);
-
+	width: 80px;
+	margin: 20px auto 20px -20px;
+	border: none;
 }
 
-.video-card {
-
+.video-card video {
+	display: block;
+	height: 100%;
+	max-width: none;
 }
 
 /* -------- Section - Sales Special */
 
+.sales-special {
+	margin-top: 100px;
+}
+
 .sales-tag {
-	color: var(--red);
+	background-color: var(--red);
 	border-radius: var(--radius);
-	padding: 10px;
+	padding: 5px 10px;
+	color: white;
+	font-weight: 800;
+	display: inline-block;
+}
+
+.special-image {
+	width: 100%;
+	border-radius: var(--radius);
+	max-height: 450px;
+	overflow: hidden;
 }
 
 .special-features {
+	margin-top: 40px;
 	background-color: #F0F0F0;
+	padding: 40px 40px;
 }
 
 
-/* -------- Section - Quote Callout */
+/* -------- Section - Sales CTA */
 .sales-cta {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	text-align: center;
+	background-image: url(http://discover.franciscan.network/wp-content/uploads/2019/04/fus-seal.png);
+	background-position: 144% 20%;
+	background-size: 70%;
+	background-repeat: no-repeat;
+}
 
+.sales-cta a {
+	background-color: var(--yellow);
+	border-radius: var(--radius) ;
+	padding: 10px;
+	color: black;
+	text-decoration: none;
+}
+
+.sales-cta a:hover {
+	
 }
 
 /* -------- Section - Quote Callout */
 .sales-quote-callout {
+	background-size: cover;
+	background-position: center center;
+	z-index: 1;
+	position: relative;
+}
 
+.sales-quote-callout::after {
+    content: '';
+    background-color: #5c5c5c;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    filter: opacity(0.5);
+    z-index: -1;
 }
 
 .sales-large-quote {
-
+	font-size: 50px;
+	line-height: 60px;
+	font-weight: 900;
+	color: white;
+	padding: 100px 0px;
+	max-width: 500px;
 }

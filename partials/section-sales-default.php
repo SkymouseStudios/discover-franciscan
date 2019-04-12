@@ -1,9 +1,9 @@
 <!-- (Repeat Sections) -->
 	<?php 
 
-	if( have_rows('sales_section' ) ):
+	if( have_rows('sales_section', $post_id ) ):
  	// loop through the rows of data
-    while ( have_rows('sales_section' ) ) : the_row();
+    while ( have_rows('sales_section', $post_id ) ) : the_row();
     	$img = get_sub_field('img');
     	$video = get_sub_field('video'); 
     	$heading = get_sub_field('heading');
