@@ -1,1 +1,1 @@
-# discover-franciscan
+# Discover Franciscan

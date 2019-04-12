@@ -7,3 +7,77 @@ Version: 1.0.0
 License: This WordPress theme is comprised of two parts: (1) The PHP code and integrated HTML are licensed under the GPL license as is WordPress itself.  You will find a copy of the license text in the same directory as this text file. Or you can read it here: http://wordpress.org/about/gpl/ (2) All other parts of the theme including, but not limited to the CSS code, images, and design are licensed according to the license purchased. Read about licensing details here: http://themeforest.net/licenses/regular_extended
 Template: dt-the7
 */
+
+/* -------- Helper Classes */
+.grid-half {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 0px;
+}
+
+.grid-three {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 80px;
+}
+
+:root {
+  --gold: #998643;
+  --lblue: #8E9FBC;
+  --red: #FF4D4D;
+  --radius: 5px;
+}
+
+
+/* -------- Section - Default */
+.sales-panel {
+
+}
+
+.sales-panel:even {
+	background-color: var(--blue);
+}
+
+.text-card {
+	border-radius: var(--radius);
+	background-color: white;
+	box-shadow: 4px -2px 70px 0 rgba(174,174,174,0.5);
+	padding: 20px;
+}
+
+.gold-line {
+	height: 10px;
+	background-color: var(--gold);
+
+}
+
+.video-card {
+
+}
+
+/* -------- Section - Sales Special */
+
+.sales-tag {
+	color: var(--red);
+	border-radius: var(--radius);
+	padding: 10px;
+}
+
+.special-features {
+	background-color: #F0F0F0;
+}
+
+
+/* -------- Section - Quote Callout */
+.sales-cta {
+
+}
+
+/* -------- Section - Quote Callout */
+.sales-quote-callout {
+
+}
+
+.sales-large-quote {
+
+}
