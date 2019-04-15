@@ -45,7 +45,7 @@ BASE
 .sales-hero {
 	position: relative;
 	margin-bottom: 40px;
-	max-height: 500px;
+	/*max-height: 500px;*/
 }
 
 .sales-header-video {

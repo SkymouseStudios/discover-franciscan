@@ -6,8 +6,11 @@
 
 get_header(); ?>
 
+
+<?php $video_header = get_field( 'video_header', $post_id ); ?>
+
 <!-- Header -->
-<section class="sales-hero">
+<div class="sales-hero">
 	<a class="sales-tag" href="#Special">Free night stay for parents in April 2019!</a>
 
 	<div class="hero-items">
@@ -16,10 +19,11 @@ get_header(); ?>
 	</div>
 	
 	<video class="sales-header-video" playsinline="" loop="" autoplay="" muted="" poster="">
-		<source src="https://exodus90.local/wp-content/uploads/2019/04/FUS-header.mp4" type="video/mp4">
+		<source src="<?php echo $video_header; ?>" type="video/mp4">
 	</video>
-</section>
+</div>
 
+<div class="">
 <!-- (Repeat Sections) -->
 	<?php 
 
@@ -51,7 +55,7 @@ get_header(); ?>
     endwhile;
 	endif;
 	?>
-
+</div>
 <?php /////////////////////////////////////////// ?>
 
 <?php 
