@@ -9,17 +9,18 @@ get_header(); ?>
 
 <?php $video_header = get_field( 'video_header', $post_id ); ?>
 <?php $picture_header = get_field( 'picture_header', $post_id ); ?>
+<?php $sales_special_banner = get_field( 'sales_special_banner', $post_id ); ?>
 
 <!-- Header -->
 <div class="sales-hero">
 
 	<?php if ( get_field( 'sales_special_option', $post_id) ): ?>
-		<a class="sales-tag" href="#Special">Free night stay for parents in April 2019!</a>
+		<a class="sales-tag" href="#Special"><?php echo $sales_special_banner; ?></a>
 	<?php endif ?>
 	
 	<div class="hero-items">
 		<h1>Visit A Campus Like No Other</h1>
-		<p>Academically Excellent. Passionately Catholic.</p>
+		<p>Academically Excellent • Passionately Catholic</p>
 	</div>
 	
 	<video class="sales-header-video" playsinline="" loop="" autoplay="" muted="" poster="<?php echo $picture_header; ?>">
@@ -133,7 +134,12 @@ get_header(); ?>
 
 <section class="sales-cta">
 	<h2 class="sales-h2"><?php echo $cta_heading ?></h2>
-	<a href="<?php echo $cta_button_url; ?>"><?php echo $cta_button_text; ?></a>
+	<a class="sales-button" href="<?php echo $cta_button_url; ?>"><?php echo $cta_button_text; ?></a>
+	<div class="sales-details">
+		<h4>To Redeem Your Free Night Stay</h4>
+		<p>Book your visit day for either April 24 or April 26 and then contact Bernardo Gonzalez in our Admissions Office at <a href="mailto:bgonzalez@franciscan.edu">bgonzalez@franciscan.edu</a> or <a href="tel:740-283-6220">740-283-6220</a>. He will make the hotel reservation.</p>
+	</div>
+	
 </section>
 
 <?php /////////////////////////////////////////// ?>

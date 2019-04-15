@@ -3,7 +3,7 @@ Theme Name: the7dtchild
 Author: Skymouse Studios
 Author URI: http://dream-theme.com/
 Description: The7 is perfectly scalable, performance and SEO optimized, responsive, retina ready multipurpose WordPress theme. It will fit every site – big or small. From huge corporate portals to studio or personal sites – The7 will become a great foundation for your next project!
-Version: 1.0.5
+Version: 1.0.9
 License: This WordPress theme is comprised of two parts: (1) The PHP code and integrated HTML are licensed under the GPL license as is WordPress itself.  You will find a copy of the license text in the same directory as this text file. Or you can read it here: http://wordpress.org/about/gpl/ (2) All other parts of the theme including, but not limited to the CSS code, images, and design are licensed according to the license purchased. Read about licensing details here: http://themeforest.net/licenses/regular_extended
 Template: dt-the7
 */
@@ -80,6 +80,10 @@ BASE
 	width: auto !important;
 	padding: 0px;
 	margin: 0px !important;
+}
+
+p {
+	font-size: 18px;
 }
 
 .page-template-page-sales-template .sales-section {
@@ -230,24 +234,24 @@ BASE
 	margin-bottom: 30px;
 }
 
-.sales-cta a {
+.sales-button {
 	background-color: var(--yellow);
 	border-radius: var(--radius) ;
-	padding: 15px;
+	padding: 15px 25px;
 	color: black;
-	font-size: 20px;
+	font-size: 30px;
 	text-decoration: none;
 	transition: 0.5s;
 }
 
-.sales-cta a:hover {
+.sales-button:hover {
 	box-shadow: 4px 8px 30px 0 rgba(123, 123, 123, 0.5);
 	transition: 0.5s;
 	background-color:#ffd584;
 }
 
 .sales-special {
-	margin-top: 50px;
+	padding-top: 50px;
 }
 
 .sales-tag {
@@ -278,6 +282,10 @@ BASE
 	padding: 40px 40px;
 }
 
+.sales-details {
+	max-width: 500px;
+	margin: 100px auto 0px auto;
+}
 
 /*********************
 TABLET
@@ -398,7 +406,7 @@ TABLET
 /* -------- Section - Sales Special */
 
 .sales-special {
-	margin-top: 100px;
+	padding-top: 100px;
 }
 
 .special-image {
@@ -427,6 +435,16 @@ TABLET
 
 
 @media only screen and (min-width: 1030px) {
+	.sales-hero {
+    	text-align: center;
+	}
+
+	.page-template-page-sales-template .wf-wrap {
+		width: auto;
+		padding: 0px;
+		margin: 0px auto;
+	}
+
 	.page-template-page-sales-template .sales-section {
 		width: 1200px;
 		margin: 0 auto;
