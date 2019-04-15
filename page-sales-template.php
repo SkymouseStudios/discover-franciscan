@@ -8,17 +8,21 @@ get_header(); ?>
 
 
 <?php $video_header = get_field( 'video_header', $post_id ); ?>
+<?php $picture_header = get_field( 'picture_header', $post_id ); ?>
 
 <!-- Header -->
 <div class="sales-hero">
-	<a class="sales-tag" href="#Special">Free night stay for parents in April 2019!</a>
 
+	<?php if ( get_field( 'sales_special_option', $post_id) ): ?>
+		<a class="sales-tag" href="#Special">Free night stay for parents in April 2019!</a>
+	<?php endif ?>
+	
 	<div class="hero-items">
 		<h1>Visit A Campus Like No Other</h1>
 		<p>Academically Excellent. Passionately Catholic.</p>
 	</div>
 	
-	<video class="sales-header-video" playsinline="" loop="" autoplay="" muted="" poster="">
+	<video class="sales-header-video" playsinline="" loop="" autoplay="" muted="" poster="<?php echo $picture_header; ?>">
 		<source src="<?php echo $video_header; ?>" type="video/mp4">
 	</video>
 </div>
@@ -73,58 +77,63 @@ get_header(); ?>
 
 <?php /////////////////////////////////////////// ?>
 
-<?php 
-	$sales_special_text = get_field('sales_special_text', $post_id);
-	$sales_special_header = get_field('sales_special', $post_id);
-	$sales_special_banner = get_field('sales_special_banner', $post_id);
-	$sales_special_img = get_field('sales_special_image', $post_id);
- ?>
+<?php if ( get_field( 'sales_special_option', $post_id) ): ?>
+		
+	<?php 
+		$sales_special_text = get_field('sales_special_text', $post_id);
+		$sales_special_header = get_field('sales_special', $post_id);
+		$sales_special_banner = get_field('sales_special_banner', $post_id);
+		$sales_special_img = get_field('sales_special_image', $post_id);
+	 ?>
 
- <section id="Special" class="sales-special">
- 	<div class="sales-section grid-two-thirds">
- 		<div>
- 			<div class="sales-tag">Limited Time!</div>
- 			<h2><?php echo $sales_special_header; ?></h2>
- 			<?php echo $sales_special_text; ?>
- 		</div>
- 		<div class="special-image">
- 			<img  src="<?php echo $sales_special_img['url']; ?>" alt="<?php echo $sales_special_img['alt']; ?>">
- 		</div>
- 	</div>
- 	
- 	
-	<div class="special-features">
-		<div class="sales-section grid-three">
-		<?php 
-		if( have_rows('feature_repeater' ) ):
-	 	// loop through the rows of data
-	    while ( have_rows('feature_repeater' ) ) : the_row();
-	    	$heading = get_sub_field('heading');
-	    	$text = get_sub_field('text'); 
-	    	?>
+	 <section id="Special" class="sales-special">
+	 	<div class="sales-section grid-two-thirds">
+	 		<div>
+	 			<div class="sales-tag">Limited Time!</div>
+	 			<h2><?php echo $sales_special_header; ?></h2>
+	 			<?php echo $sales_special_text; ?>
+	 		</div>
+	 		<div class="special-image">
+	 			<img  src="<?php echo $sales_special_img['url']; ?>" alt="<?php echo $sales_special_img['alt']; ?>">
+	 		</div>
+	 	</div>
+	 	
+	 	
+		<div class="special-features">
+			<div class="sales-section grid-three">
+			<?php 
+			if( have_rows('feature_repeater' ) ):
+		 	// loop through the rows of data
+		    while ( have_rows('feature_repeater' ) ) : the_row();
+		    	$heading = get_sub_field('heading');
+		    	$text = get_sub_field('text'); 
+		    	?>
 
-			<div class="single-feature">
-				<h4><?php echo $heading;?></h4>
-				<p><?php echo $text; ?></p>
+				<div class="single-feature">
+					<h4><?php echo $heading;?></h4>
+					<p><?php echo $text; ?></p>
+				</div>
+		<?php
+		    endwhile;
+			endif;
+			?>
 			</div>
-	<?php
-	    endwhile;
-		endif;
-		?>
 		</div>
-	</div>
- </section>
+	 </section>
+
+ <?php endif ?>
 
 <?php /////////////////////////////////////////// ?>
 
 <?php 
 	$cta_heading = get_field('sales_cta_heading');
 	$cta_button_text = get_field('sales_cta_button_text');
+	$cta_button_url = get_field('sales_cta_button_url');
  ?>
 
 <section class="sales-cta">
 	<h2 class="sales-h2"><?php echo $cta_heading ?></h2>
-	<a href="#"><?php echo $cta_button_text; ?></a>
+	<a href="<?php echo $cta_button_url; ?>"><?php echo $cta_button_text; ?></a>
 </section>
 
 <?php /////////////////////////////////////////// ?>

@@ -1,9 +1,9 @@
 /*
-Theme Name: Franciscan Theme
+Theme Name: the7dtchild
 Author: Skymouse Studios
 Author URI: http://dream-theme.com/
 Description: The7 is perfectly scalable, performance and SEO optimized, responsive, retina ready multipurpose WordPress theme. It will fit every site – big or small. From huge corporate portals to studio or personal sites – The7 will become a great foundation for your next project!
-Version: 1.0.0
+Version: 1.0.5
 License: This WordPress theme is comprised of two parts: (1) The PHP code and integrated HTML are licensed under the GPL license as is WordPress itself.  You will find a copy of the license text in the same directory as this text file. Or you can read it here: http://wordpress.org/about/gpl/ (2) All other parts of the theme including, but not limited to the CSS code, images, and design are licensed according to the license purchased. Read about licensing details here: http://themeforest.net/licenses/regular_extended
 Template: dt-the7
 */
@@ -45,21 +45,30 @@ BASE
 .sales-hero {
 	position: relative;
 	margin-bottom: 40px;
-	/*max-height: 500px;*/
+	max-height: 500px;
+	overflow: hidden;
 }
 
 .sales-header-video {
 	height: 500px;
 	max-width: none;
+	margin-top: -20%;
 }
 
 .sales-hero .sales-tag {
 	position: absolute;
 	top: 0px;
 	border-radius: 0px;
-	position: fixed;
 	width: 100%;
 	text-align: center;
+	z-index: 999;
+	transition: 0.5s;
+}
+
+.sales-hero .sales-tag:hover {
+	background-color: #fd8282;
+	color: white;
+	transition: 0.5s;
 }
 
 .grid-two-thirds {
@@ -210,22 +219,31 @@ BASE
 	padding-top: 100px;
 	padding-bottom: 100px;
 	text-align: center;
-	background-image: url(http://discover.franciscan.network/wp-content/uploads/2019/04/fus-seal.png);
+	background-image: url(https://discover.franciscan.network/wp-content/uploads/revslider/notgeneric1/Seal1c_white_900x900_100ppi.png);
 	background-position: 184% 20%;
 	background-size: 90%;
 	background-repeat: no-repeat;
 }
 
+.sales-h2 {
+	font-family: Palatino;
+	margin-bottom: 30px;
+}
+
 .sales-cta a {
 	background-color: var(--yellow);
 	border-radius: var(--radius) ;
-	padding: 10px;
+	padding: 15px;
 	color: black;
+	font-size: 20px;
 	text-decoration: none;
+	transition: 0.5s;
 }
 
 .sales-cta a:hover {
-	
+	box-shadow: 4px 8px 30px 0 rgba(123, 123, 123, 0.5);
+	transition: 0.5s;
+	background-color:#ffd584;
 }
 
 .sales-special {
@@ -248,6 +266,10 @@ BASE
 	max-height: 350px;
 	overflow: hidden;
 	grid-row: 1;
+}
+
+.special-image img {
+	width: 100%;
 }
 
 .special-features {
@@ -281,9 +303,6 @@ TABLET
 	grid-gap: 50px;
 }
 
-.sales-h2 {
-	font-family: Palatino;
-}
 
 /* -------- Page - Default */
 
@@ -297,6 +316,14 @@ TABLET
 	max-width: 100%;
 }
 
+.sales-hero .sales-tag {
+	position: absolute;
+	top: 20px;
+    left: 20px;
+	border-radius: 5px;
+	width: auto;
+	text-align: left;
+}
 /* -------- Section - Default */
 
 .sales-panel {
@@ -376,7 +403,8 @@ TABLET
 
 .special-image {
 	max-height: 450px;
-	grid-column: 2;
+	grid-column: 2 / 3;
+	width: auto;
 }
 
 .special-features {
