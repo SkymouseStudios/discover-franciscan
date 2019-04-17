@@ -137,7 +137,8 @@ get_header(); ?>
 	<a class="sales-button" href="<?php echo $cta_button_url; ?>"><?php echo $cta_button_text; ?></a>
 	<div class="sales-details">
 		<h4>To Redeem Your Free Night Stay</h4>
-		<p>Book your visit day for either April 24 or April 26 and then contact Bernardo Gonzalez in our Admissions Office at <a href="mailto:bgonzalez@franciscan.edu">bgonzalez@franciscan.edu</a> or <a href="tel:740-283-6220">740-283-6220</a>. He will make the hotel reservation.</p>
+		<p>Book your visit day for either April 24 or April 26 and then contact Bernardo Gonzalez in our Admissions Office at <a href="mailto:bgonzalez@franciscan.edu">bgonzalez@franciscan.edu</a> or <a href="tel:740-284-5237">740-284-5237</a>. He will make the hotel reservation.</p>
+		<p><strong>NOTE: Offer applies only to these two dates, not applicable to any other dates.</strong></p>
 	</div>
 	
 </section>
