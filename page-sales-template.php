@@ -77,20 +77,16 @@ get_header(); ?>
 </section>
 
 <?php /////////////////////////////////////////// ?>
-
-<?php if ( get_field( 'sales_special_option', $post_id) ): ?>
 		
 	<?php 
 		$sales_special_text = get_field('sales_special_text', $post_id);
 		$sales_special_header = get_field('sales_special', $post_id);
-		$sales_special_banner = get_field('sales_special_banner', $post_id);
 		$sales_special_img = get_field('sales_special_image', $post_id);
 	 ?>
 
 	 <section id="Special" class="sales-special">
 	 	<div class="sales-section grid-two-thirds">
 	 		<div>
-	 			<div class="sales-tag">Limited Time!</div>
 	 			<h2><?php echo $sales_special_header; ?></h2>
 	 			<?php echo $sales_special_text; ?>
 	 		</div>
@@ -122,8 +118,6 @@ get_header(); ?>
 		</div>
 	 </section>
 
- <?php endif ?>
-
 <?php /////////////////////////////////////////// ?>
 
 <?php 
@@ -134,13 +128,7 @@ get_header(); ?>
 
 <section class="sales-cta">
 	<h2 class="sales-h2"><?php echo $cta_heading ?></h2>
-	<a class="sales-button" href="<?php echo $cta_button_url; ?>"><?php echo $cta_button_text; ?></a>
-	<div class="sales-details">
-		<h4>To Redeem Your Free Night Stay</h4>
-		<p>Book your visit day for either April 24 or April 26 and then contact Bernardo Gonzalez in our Admissions Office at <a href="mailto:bgonzalez@franciscan.edu">bgonzalez@franciscan.edu</a> or <a href="tel:740-284-5237">740-284-5237</a>. He will make the hotel reservation.</p>
-		<p><strong>NOTE: Offer applies only to these two dates, not applicable to any other dates.</strong></p>
-	</div>
-	
+	<a class="sales-button" href="<?php echo $cta_button_url; ?>"><?php echo $cta_button_text; ?></a>	
 </section>
 
 <?php /////////////////////////////////////////// ?>
