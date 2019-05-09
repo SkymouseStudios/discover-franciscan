@@ -4,7 +4,7 @@ Theme Name: the7dtchild
 Author: Skymouse Studios
 Author URI: http://dream-theme.com/
 Description: The7 is perfectly scalable, performance and SEO optimized, responsive, retina ready multipurpose WordPress theme. It will fit every site – big or small. From huge corporate portals to studio or personal sites – The7 will become a great foundation for your next project!
-Version: 1.1.2
+Version: 1.2.0
 License: This WordPress theme is comprised of two parts: (1) The PHP code and integrated HTML are licensed under the GPL license as is WordPress itself.  You will find a copy of the license text in the same directory as this text file. Or you can read it here: http://wordpress.org/about/gpl/ (2) All other parts of the theme including, but not limited to the CSS code, images, and design are licensed according to the license purchased. Read about licensing details here: http://themeforest.net/licenses/regular_extended
 Template: dt-the7
 */
@@ -14,10 +14,39 @@ Template: dt-the7
   --lblue: #8E9FBC;
   --red: #FF4D4D;
   --radius: 5px;
-  --yellow: #ffc658; }
+  --yellow: #ffc658;
+  --green: #21412a;
+  --dblue: #1F2A44; }
 
-p {
-  font-size: 18px; }
+.center-text {
+  text-align: center;
+  margin: 0 auto; }
+
+.subheading {
+  max-width: 600px; }
+
+.grid-three {
+  display: grid;
+  grid-gap: 100px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+.grid-two-thirds {
+  display: grid; }
+
+.grid-half {
+  display: grid;
+  grid-gap: 0px; }
+
+.grid-three {
+  display: grid;
+  grid-gap: 20px; }
+
+p, li {
+  font-size: 16px; }
+
+.section-panel {
+  width: auto;
+  margin: 40px 20px; }
 
 .hero-items {
   position: absolute;
@@ -27,7 +56,8 @@ p {
   bottom: 0px;
   left: 0px;
   right: 0px;
-  padding: 0px 40px; }
+  padding: 0px 40px;
+  z-index: 9; }
   .hero-items h1 {
     color: white;
     font-size: 40px;
@@ -81,18 +111,6 @@ p {
     background-color: var(--lblue);
     width: 100%; }
 
-.grid-two-thirds {
-  display: grid;
-  grid-gap: 50px; }
-
-.grid-half {
-  display: grid;
-  grid-gap: 0px; }
-
-.grid-three {
-  display: grid;
-  grid-gap: 20px; }
-
 .video-card {
   grid-column: 1;
   grid-row: 1;
@@ -116,12 +134,11 @@ p {
   margin-top: -20px;
   border-radius: 5px 0px 0px 5px; }
   .text-card p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 30px;
     color: black;
     margin: 0px; }
   .text-card h3 {
-    font-family: Palatino;
     font-size: 20px;
     color: black;
     margin: 0px; }
@@ -150,7 +167,6 @@ p {
   margin: 20px auto 20px -20px;
   border: none; }
 
-/* -------- Section - Quote Callout */
 .sales-quote-callout {
   background-size: cover;
   background-position: center center;
@@ -175,7 +191,6 @@ p {
   padding: 100px 0px;
   max-width: 500px; }
 
-/* -------- Section - Sales CTA -------- */
 .sales-cta {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -183,20 +198,20 @@ p {
   background-image: url(https://discover.franciscan.network/wp-content/uploads/revslider/notgeneric1/Seal1c_white_900x900_100ppi.png);
   background-position: 184% 20%;
   background-size: 90%;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-color: #F0F0F0; }
 
 .sales-h2 {
-  font-family: Palatino;
-  margin-bottom: 30px; }
+  margin-bottom: 20px; }
 
 .sales-button {
   background-color: var(--yellow);
   border-radius: var(--radius);
   padding: 15px 25px;
   color: black;
-  font-size: 30px;
   text-decoration: none;
-  transition: 0.5s; }
+  transition: 0.5s;
+  display: inline-block; }
   .sales-button:hover {
     box-shadow: 4px 8px 30px 0 rgba(123, 123, 123, 0.5);
     transition: 0.5s;
@@ -232,6 +247,124 @@ p {
   max-width: 500px;
   margin: 50px auto 0px auto; }
 
+.calendar-section {
+  grid-gap: 20px; }
+
+.date-card {
+  color: white;
+  border-radius: var(--radius);
+  background-color: var(--green); }
+  .date-card hr {
+    border: solid;
+    border-width: 2px;
+    color: #46664F; }
+  .date-card h3 {
+    color: white; }
+  .date-card .date-contents {
+    margin: 25px; }
+    .date-card .date-contents li {
+      font-size: 20px;
+      line-height: 32px; }
+    .date-card .date-contents > ul {
+      padding-left: 20px;
+      border-left: solid 2px var(--gold);
+      position: relative; }
+      .date-card .date-contents > ul ul {
+        padding-left: 20px;
+        font-weight: 300; }
+      .date-card .date-contents > ul > li {
+        font-weight: 800; }
+        .date-card .date-contents > ul > li:before {
+          content: '';
+          background-color: var(--green);
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          border: solid 4px var(--gold);
+          border-radius: 20px;
+          left: -15px; }
+
+.feature-section {
+  color: white;
+  padding: 60px 0;
+  background-color: var(--dblue); }
+  .feature-section h4, .feature-section h2 {
+    color: white; }
+
+.features {
+  padding-top: 40px; }
+
+.grid-item {
+  text-align: left; }
+
+.grid-item img {
+  height: 80px;
+  padding-bottom: 20px; }
+
+.grid-item h2 {
+  text-align: left;
+  line-height: 1.3em;
+  margin-bottom: 10px; }
+
+.grid-item p {
+  text-align: left; }
+
+.special-callout {
+  background-color: white;
+  box-shadow: 4px -2px 70px 0 rgba(174, 174, 174, 0.5);
+  border-top: 6px solid var(--gold);
+  border-radius: 0px 0px 5px 5px;
+  margin: 0px 20px 40px 20px; }
+  .special-callout .main-container {
+    grid-column: 2 / 3;
+    padding: 40px; }
+  .special-callout p {
+    margin-bottom: 40px; }
+  .special-callout .img-container {
+    grid-column: 1;
+    overflow: hidden;
+    width: 100%; }
+    .special-callout .img-container img {
+      display: block;
+      height: 100%;
+      width: auto; }
+
+.accordion-title {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  margin-bottom: 5px; }
+
+.accordion-title:after {
+  content: '+';
+  /* Unicode character for "plus" sign (+) */
+  font-size: 16px;
+  color: #777;
+  float: right;
+  margin-left: 5px; }
+
+.active:after {
+  content: "\2796";
+  /* Unicode character for "minus" sign (-) */ }
+
+.active, .accordion:hover {
+  background-color: #ccc; }
+
+.accordian-panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  margin-bottom: 5px; }
+
 /*********************
 TABLET & SMALLER LAPTOPS
 *********************/
@@ -243,11 +376,14 @@ TABLET & SMALLER LAPTOPS
     grid-gap: 0px; }
   .grid-three {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 50px; }
+    grid-gap: 70px; }
   .grid-two-thirds {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-gap: 50px; }
+    grid-gap: 20px; }
+  .section-panel {
+    width: 800px;
+    margin: 40px auto; }
   /* -------- Page - Default */
   .page-template-page-sales-template .sales-section {
     width: 800px;
@@ -282,22 +418,22 @@ TABLET & SMALLER LAPTOPS
     grid-column: 2;
     grid-row: 1; }
   .sales-panel:nth-child(even) .text-card {
-    margin-right: 50px;
-    margin-left: -50px;
+    margin-right: 240px;
+    margin-left: -450px;
     border-radius: var(--radius); }
   .text-card {
     border-radius: var(--radius);
-    margin-right: -50px;
-    margin-left: 50px;
-    max-width: 550px; }
+    margin-right: -260px;
+    margin-left: 20px;
+    width: 410px; }
   .text-holder {
     grid-column: 1;
     grid-row: 1; }
   .text-card p {
-    font-size: 20px;
-    line-height: 35px; }
+    font-size: 16px;
+    line-height: 28px; }
   .text-card h3 {
-    font-size: 35px; }
+    font-size: 30px; }
   .video-card {
     border-radius: var(--radius);
     z-index: -1;
@@ -305,7 +441,8 @@ TABLET & SMALLER LAPTOPS
     width: 100%;
     height: 400px;
     grid-column: 2;
-    grid-row: 1; }
+    grid-row: 1;
+    border-radius: 5px; }
   .video-card video {
     display: block;
     height: 100%;
@@ -327,6 +464,8 @@ TABLET & SMALLER LAPTOPS
   .sales-cta {
     background-position: 144% 20%;
     background-size: 70%; }
+  .calendar-section {
+    grid-gap: 50px; }
   /* End Desktop Styles */ }
 
 /*********************
@@ -346,8 +485,11 @@ DESKTOP
     width: 1200px;
     margin: 40px auto; }
   .sales-panel:nth-child(even) .text-card {
-    margin-right: 100px;
-    margin-left: -100px; }
+    margin-left: -240px; }
   .text-card {
-    margin-right: -100px;
-    margin-left: 100px; } }
+    margin-right: -50px;
+    margin-left: 50px;
+    width: 520px; }
+  .section-panel {
+    width: 1200px;
+    margin: 40px auto; } }

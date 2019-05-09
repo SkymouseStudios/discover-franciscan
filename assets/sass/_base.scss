@@ -1,0 +1,478 @@
+// ----------------------------------//
+/* -------- Helper Classes -------- */
+// ----------------------------------//
+
+:root {
+  --gold: #998643;
+  --lblue: #8E9FBC;
+  --red: #FF4D4D;
+  --radius: 5px;
+  --yellow: #ffc658;
+  --green: #21412a;
+  --dblue: #1F2A44;
+}
+
+.center-text {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.subheading {
+	max-width: 600px;
+}
+
+.grid-three {
+    display: grid;
+    grid-gap: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-two-thirds {
+	display: grid;
+	// grid-gap: 50px; (Fixes mobile for parents callout)
+}
+
+.grid-half {
+	display: grid;
+	grid-gap: 0px;
+}
+
+.grid-three {
+	display: grid;
+	grid-gap: 20px;
+}
+
+p, li {
+	font-size: 16px;
+}
+
+.section-panel {
+	width: auto;
+	margin: 40px 20px;
+}
+
+.hero-items {
+	position: absolute;
+	color: white;
+	text-align: center;
+	top: 30%;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	padding: 0px 40px;
+	z-index: 9;
+
+	h1 {
+		color: white;
+		font-size: 40px;
+		text-shadow: #5d5d5d 1px 1px 20px;
+	}
+
+	p {
+		font-size: 20px;
+		text-shadow: #5d5d5d 1px 1px 20px;
+	}
+}
+
+.sales-hero {
+	position: relative;
+	margin-bottom: 40px;
+	max-height: 500px;
+	overflow: hidden;
+
+	.sales-tag {
+		position: absolute;
+		top: 0px;
+		border-radius: 0px;
+		width: 100%;
+		text-align: center;
+		z-index: 999;
+		transition: 0.5s;
+	}
+
+	.sales-hero .sales-tag:hover {
+		background-color: #fd8282;
+		color: white;
+		transition: 0.5s;
+	}
+}
+
+.sales-header-video {
+	height: 500px;
+	max-width: none;
+	margin-top: -20%;
+}
+
+.page-template-page-sales-template {
+	.sales-section {
+		width: auto;
+		margin: 0 20px;
+	}
+
+	.wf-wrap {
+		width: auto !important;
+		padding: 0px;
+		margin: 0px !important;
+	}
+
+	#main .wf-wrap {
+		padding: 0px;
+	}
+
+	#main {
+		padding: 0px;
+	}
+}
+
+.sales-panel {
+	margin: 0px auto 40px auto;
+	z-index: 1;
+
+	&:nth-child(even) {
+		background-color: var(--lblue);
+		width: 100%;
+	}
+}
+
+.video-card {
+	grid-column: 1;
+	grid-row: 1;
+	z-index: 1;
+	overflow: hidden;
+	width: 100%;
+	width: auto;
+	height: 300px;
+	margin-right: 20px;
+	border-radius: 0px 5px 5px 0px;
+
+	video {
+		display: block;
+		height: 100%;
+		max-width: none;
+	}
+}
+
+.text-card {
+	background-color: white;
+	box-shadow: 4px -2px 70px 0 rgba(174,174,174,0.5);
+	padding: 20px 40px;
+	margin-left: 20px;
+	margin-top: -20px;
+	border-radius: 5px 0px 0px 5px;
+
+	p {
+		font-size: 14px;
+		line-height: 30px;
+		color: black;
+		margin: 0px;
+	}
+
+	h3 {
+		font-size: 20px;
+		color: black;
+		margin: 0px;
+	}
+}
+
+.text-holder {
+	grid-column: 1;
+	grid-row: 2;
+	z-index: 10;
+}
+
+.sales-panel:nth-child(even) .text-card {
+	margin-right: 20px;
+	margin-left: 0px;
+	margin-bottom: -20px;
+	border-radius: 0px 5px 5px 0px;
+}
+
+.sales-panel:nth-child(even) .video-card {
+	margin-top: -20px;
+	margin-left: 20px;
+	margin-right: 0px;
+	border-radius: 5px 0px 0px 5px;
+	
+}
+
+.gold-line {
+	height: 10px;
+	background-color: var(--gold);
+	width: 80px;
+	margin: 20px auto 20px -20px;
+	border: none;
+}
+
+// ---------------------------//
+// QUOTE AND PICTURE SECTION
+// ---------------------------//
+
+.sales-quote-callout {
+	background-size: cover;
+	background-position: center center;
+	z-index: 1;
+	position: relative;
+
+	&::after {
+	    content: '';
+	    background-color: #5c5c5c;
+	    position: absolute;
+	    top: 0px;
+	    bottom: 0px;
+	    right: 0px;
+	    left: 0px;
+	    filter: opacity(0.5);
+	    z-index: -1;
+	}
+}
+
+.sales-large-quote {
+	font-size: 30px;
+	line-height: 40px;
+	font-weight: 900;
+	color: white;
+	padding: 100px 0px;
+	max-width: 500px;
+}
+
+// --------------------------//
+// CALL TO ACTION SECTION
+// --------------------------//
+
+.sales-cta {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	text-align: center;
+	background-image: url(https://discover.franciscan.network/wp-content/uploads/revslider/notgeneric1/Seal1c_white_900x900_100ppi.png);
+	background-position: 184% 20%;
+	background-size: 90%;
+	background-repeat: no-repeat;
+	background-color: #F0F0F0;
+}
+
+.sales-h2 {
+	margin-bottom: 20px;
+}
+
+.sales-button {
+	background-color: var(--yellow);
+	border-radius: var(--radius) ;
+	padding: 15px 25px;
+	color: black;
+	text-decoration: none;
+	transition: 0.5s;
+	display: inline-block;
+
+	&:hover {
+		box-shadow: 4px 8px 30px 0 rgba(123, 123, 123, 0.5);
+		transition: 0.5s;
+		background-color:#ffd584;
+	}
+}
+
+.sales-special {
+	padding-top: 50px;
+}
+
+.sales-tag {
+	background-color: var(--red);
+	border-radius: var(--radius);
+	padding: 5px 10px;
+	color: white;
+	font-weight: 800;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.special-image {
+	width: 100%;
+	border-radius: var(--radius);
+	max-height: 350px;
+	overflow: hidden;
+	grid-row: 1;
+
+	img {
+		width: 100%;
+	}
+}
+
+.special-features {
+	margin-top: 40px;
+	background-color: #F0F0F0;
+	padding: 40px 40px;
+}
+
+.sales-details {
+	max-width: 500px;
+	margin: 50px auto 0px auto;
+}
+
+// ---------------------//
+// CALENDAR OF EVENTS
+// ---------------------//
+
+.calendar-section {
+	grid-gap: 20px;
+}
+
+.date-card {
+	color: white;
+	border-radius: var(--radius);
+	background-color: var(--green);
+
+	hr {
+		border: solid;
+		border-width: 2px;
+    	color: #46664F;
+	}
+
+	h3 {
+		color: white;
+	}
+
+	.date-contents {
+		margin: 25px;
+
+		li {
+			font-size: 20px;
+    		line-height: 32px;
+		}
+
+		> ul {
+			padding-left: 20px;
+			border-left: solid 2px var(--gold);
+			position: relative;
+
+			ul {
+				padding-left: 20px;
+				font-weight: 300;
+			}
+
+			> li { 
+				font-weight: 800;
+
+				&:before {
+					content: '';
+				    background-color: var(--green);
+				    position: absolute;
+				    width: 20px;
+				    height: 20px;
+				    border: solid 4px var(--gold);
+				    border-radius: 20px;
+				    left: -15px;
+				}
+			}
+		}
+	}
+}
+
+// -------------------------//
+/// THREE FEATURE SECTION
+// -------------------------//
+
+.feature-section{
+	color: white;
+    padding: 60px 0;
+    background-color: var(--dblue);
+
+    h4, h2 {
+    	color: white;
+    }
+}
+
+.features {
+	padding-top: 40px;
+}
+
+.grid-item {
+    text-align: left;
+}
+
+.grid-item img {
+    height: 80px;
+    padding-bottom: 20px;
+}
+
+.grid-item h2 {
+    text-align: left;
+    line-height: 1.3em;
+    margin-bottom: 10px;
+}
+
+.grid-item p{
+    text-align: left;
+}
+
+/// special callout
+
+.special-callout {
+	background-color: white;
+	box-shadow: 4px -2px 70px 0 rgba(174,174,174,0.5);
+	border-top: 6px solid var(--gold);
+	border-radius: 0px 0px 5px 5px;
+	margin: 0px 20px 40px 20px;
+
+	.main-container {
+		grid-column: 2 / 3;
+		padding: 40px;
+	}
+
+	p {
+		margin-bottom: 40px;
+	}
+
+	.img-container {
+		grid-column: 1;
+		overflow: hidden;
+		width: 100%;
+
+		img {
+			display: block;
+			height: 100%;
+			width: auto;
+		}
+	}
+}
+
+// ----------- Accordian Styles
+
+.accordion-title {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  margin-bottom: 5px;
+}
+
+.accordion-title:after {
+  content: '+'; /* Unicode character for "plus" sign (+) */
+  font-size: 16px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.accordian-panel {
+	padding: 0 18px;
+	background-color: white;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	margin-bottom: 5px;
+} 
+
+// ----- End Accordian Styles

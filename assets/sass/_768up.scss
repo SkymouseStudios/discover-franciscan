@@ -1,0 +1,150 @@
+/* -------- Helper Classes */
+.grid-half {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 0px;
+}
+
+.grid-three {
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 70px;
+}
+
+.grid-two-thirds {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-gap: 20px;
+}
+
+.section-panel {
+	width: 800px;
+	margin: 40px auto;
+}
+
+/* -------- Page - Default */
+
+.page-template-page-sales-template .sales-section {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.sales-header-video {
+	height: auto;
+	max-width: 100%;
+}
+
+.sales-hero .sales-tag {
+	position: absolute;
+	top: 20px;
+    left: 20px;
+	border-radius: 5px;
+	width: auto;
+	text-align: left;
+}
+
+/* -------- Section - Default */
+
+.sales-panel {
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	margin: 20px auto;
+	z-index: 1;
+	width: auto;
+}
+
+.sales-panel:nth-child(even) {
+	background-color: var(--lblue);
+	width: 100%;
+}
+
+.sales-panel:nth-child(even) .video-card {
+	grid-column: 1;
+	grid-row: 1;
+	border-radius: 0px;
+	margin: 0;
+}
+
+.sales-panel:nth-child(even) .text-holder {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.sales-panel:nth-child(even) .text-card {
+	margin-right: 240px;
+	margin-left: -450px;
+	border-radius: var(--radius);
+}
+
+.text-card {
+	border-radius: var(--radius);
+	margin-right: -260px;
+	margin-left: 20px;
+	width: 410px;
+}
+
+.text-holder {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.text-card p {
+	font-size: 16px;
+    line-height: 28px;
+}
+
+.text-card h3 {
+	font-size: 30px;
+}
+
+.video-card {
+	border-radius: var(--radius);
+	z-index: -1;
+	overflow: hidden;
+	width: 100%;
+	height: 400px;
+	grid-column: 2;
+	grid-row: 1;
+	border-radius: 5px;
+}
+
+.video-card video {
+	display: block;
+	height: 100%;
+	max-width: none;
+}
+
+/* -------- Section - Sales Special */
+
+.sales-special {
+	padding-top: 100px;
+}
+
+.special-image {
+	max-height: 450px;
+	grid-column: 2 / 3;
+	width: auto;
+}
+
+.special-features {
+	margin-top: 40px;
+	background-color: #F0F0F0;
+	padding: 40px 40px;
+}
+
+.sales-large-quote {
+	font-size: 50px;
+	line-height: 60px;
+}
+
+.sales-cta {
+	background-position: 144% 20%;
+	background-size: 70%;
+}
+
+
+.calendar-section {
+    grid-gap: 50px;
+}
+
+/* End Desktop Styles */

@@ -1,0 +1,34 @@
+.sales-hero {
+	text-align: center;
+}
+
+.page-template-page-sales-template .wf-wrap {
+	width: auto;
+	padding: 0px;
+	margin: 0px auto;
+}
+
+.page-template-page-sales-template .sales-section {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.sales-panel {
+	width: 1200px;
+	margin: 40px auto;
+}
+
+.sales-panel:nth-child(even) .text-card {
+	margin-left: -240px;
+}
+
+.text-card {
+	margin-right: -50px;
+	margin-left: 50px;
+	width: 520px;
+}
+
+.section-panel {
+	width: 1200px;
+	margin: 40px auto;
+}
